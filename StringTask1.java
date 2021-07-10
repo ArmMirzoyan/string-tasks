@@ -10,13 +10,18 @@ public class StringTask1 {
 
         System.out.println(a.length() + b.length());
 
-        if(a.charAt(0) > b.charAt(0)){
+        if(a.compareTo(b) > 0){
             System.out.println("Yes");
         } else {
             System.out.println("No");
         }
 
-        System.out.println(a.substring(0, 1).toUpperCase() + a.substring(1) + " " +
-                b.substring(0, 1).toUpperCase() + b.substring(1));
+        capitalize(a);
+        capitalize(b);
+    }
+    public static String capitalize(String str){
+        String newString = str.substring(0, 1).toUpperCase() + str.substring(1);
+        System.out.print(newString + " ");
+        return newString;
     }
 }

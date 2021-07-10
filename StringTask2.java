@@ -8,15 +8,18 @@ public class StringTask2 {
         s2 = s2.toLowerCase();
 
         if (s1.length() == s2.length()) {
-            int[] arr1 = new int[256];
-            int[] arr2 = new int[256];
+            char [] ch1 = new char[s1.length()];
+            char [] ch2 = new char[s1.length()];
             for (int i = 0; i < s1.length(); i++) {
-                arr1[ s1.charAt(i)] += 1;
-                arr2[ s2.charAt(i)] += 1;
+                ch1[i] = s1.charAt(i);
+                ch2[i] = s2.charAt(i);
             }
-            for (int i = 0; i < 256; i++) {
-                if (arr1[i] != arr2[i])
+            InsertionSortingChar.insertSort(ch1);
+            InsertionSortingChar.insertSort(ch2);
+            for (int i = 0; i < s1.length(); i++) {
+                if (ch1[i] != ch2[i]) {
                     return false;
+                }
             }
             return true;
         } else {
