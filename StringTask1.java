@@ -16,12 +16,10 @@ public class StringTask1 {
             System.out.println("No");
         }
 
-        capitalize(a);
-        capitalize(b);
+        System.out.println(capitalize(a) + " " + capitalize(b));
     }
     public static String capitalize(String str){
         String newString = str.substring(0, 1).toUpperCase() + str.substring(1);
-        System.out.print(newString + " ");
         return newString;
     }
 }
