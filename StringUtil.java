@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class StringTask2 {
@@ -11,14 +12,9 @@ public class StringTask2 {
             char[] chars1 = s1.toCharArray();
             char[] chars2 = s2.toCharArray();
 
-            InsertionSortingChar.insertSort(chars1);
-            InsertionSortingChar.insertSort(chars2);
-            for (int i = 0; i < s1.length(); i++) {
-                if (chars1[i] != chars2[i]) {
-                    return false;
-                }
-            }
-            return true;
+            SortingUtil.insertSortChar(chars1);
+            SortingUtil.insertSortChar(chars2);
+            return Arrays.equals(chars1, chars2);
         } else {
             return false;
         }

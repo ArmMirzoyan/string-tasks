@@ -1,5 +1,5 @@
-public class InsertionSortingChar {
-    public static void insertSort(char[] chars) {
+public class SortingUtil {
+    public static void insertSortChar(char[] chars) {
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < chars.length - 1; i++) {
             // Find the minimum element in unsorted array by one iteration
