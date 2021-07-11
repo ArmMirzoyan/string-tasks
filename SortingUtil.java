@@ -1,4 +1,8 @@
 public class SortingUtil {
+    private SortingUtil() {
+
+    }
+
     public static void insertSortChar(char[] chars) {
         // One by one move boundary of unsorted subarray
         for (int i = 0; i < chars.length - 1; i++) {
@@ -12,7 +16,8 @@ public class SortingUtil {
             swap(chars, minIndex, i);
         }
     }
-    public static void swap(char [] chars, int minIndex, int i) {
+
+    public static void swap(char[] chars, int minIndex, int i) {
         char temp = chars[minIndex];
         chars[minIndex] = chars[i];
         chars[i] = temp;

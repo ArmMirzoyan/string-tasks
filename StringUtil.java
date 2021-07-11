@@ -1,7 +1,10 @@
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class StringTask2 {
+public class StringUtil {
+    private StringUtil() {
+
+    }
+
     static boolean isAnagram(String s1, String s2) {
         if (s1.length() != s2.length()) return false;
 
@@ -20,15 +23,9 @@ public class StringTask2 {
         }
     }
 
-    public static void main(String[] args) {
+    public static String capitalize(String str) {
+        return str.substring(0, 1).toUpperCase() + str.substring(1);
 
-        Scanner scan = new Scanner(System.in);
-        String a = scan.next();
-        String b = scan.next();
-        scan.close();
-        boolean res = isAnagram(a, b);
-        System.out.println((res) ? "Anagrams" : "Not Anagrams");
     }
-
 }
 
